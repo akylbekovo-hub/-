@@ -1,0 +1,71 @@
+    <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Счетчик со сменой цвета</title>
+    
+    <style>
+        body {
+            background-color: lightgray; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.4s ease; 
+        }
+
+        .counter-container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        #counter-display {
+            font-size: 8em;
+            font-weight: bold;
+            color: black; 
+            margin-bottom: 30px;
+            min-width: 150px; 
+            transition: color 0.4s ease; 
+        }
+
+        .button-group {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+            justify-content: center; 
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        #speed-plus { background-color: #77dd77; }
+        #speed-minus { background-color: #ff6961; }
+        #reset-btn { background-color: #d3d3d3; }
+
+        button:hover { opacity: 0.8; }
+    </style>
+</head>
+<body>
+    <div class="counter-container">
+        <div id="counter-display">00:00</div>
+        
+        <div class="button-group">
+            <button id="speed-minus">speed -</button>
+            <button id="reset-btn">reset</button>
+            <button id="speed-plus">speed +</button>
+        </div>
+    </div>
+
+    <script src="JS.js" defer></script>
+</body>
+</html>
